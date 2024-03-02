@@ -1,77 +1,46 @@
 function newImage(src, left, bottom) {
-    let character = document.createElement('img');
-    character.src = src;
-    character.style.position = 'fixed';
-    character.style.left = left;
-    character.style.bottom = bottom;
-    document.body.append(character);
+    let object = document.createElement('img');
+    object.src = src;
+    object.style.position = 'fixed';
+    object.style.left = left + 'px' ;
+    object.style.bottom = bottom + 'px' ;
+    document.body.append(object);
+    return object
 }
 
-let greenCharacterSrc = 'assets/green-character.gif';
-let greenCharacterLeft = '100px';
-let greenCharacterBottom = '100px';
-newImage(greenCharacterSrc, greenCharacterLeft, greenCharacterBottom);
+function newItem(src, left, bottom) {
+    let object = newImage(src, left, bottom)
 
-let pineTreeSrc = 'assets/pine-tree.png';
-let pineTreeLeft = '450px';
-let pineTreeBottom = '200px';
-newImage(pineTreeSrc, pineTreeLeft, pineTreeBottom);
-
-let treeSrc = 'assets/tree.png';
-let treeLeft = '200px';
-let treeBottom = '300px';
-newImage(treeSrc, treeLeft, treeBottom);
-
-let pillarSrc = 'assets/pillar.png';
-let pillarLeft = '350px'
-let pillarBottom = '100px'
-newImage(pillarSrc, pillarLeft, pillarBottom)
-
-let crateSrc = 'assets/crate.png';
-let crateLeft = '150px'
-let crateBottom = '200px'
-newImage(crateSrc, crateLeft, crateBottom)
-
-let wellSrc = 'assets/well.png';
-let wellLeft = '500px'
-let wellBottom = '425px'
-newImage(wellSrc, wellLeft, wellBottom)
-
-function newitem(src, left, bottom){
-    newImage(src, left, bottom)
+    object.addEventListener('dblclick', () => {
+        object.remove()
+    })
 }
 
-let swordSrc = 'assets/sword.png'
-let swordLeft = '500px'
-let swordBottom = '405px'
-    newitem(swordSrc, swordLeft, swordBottom)
+newImage('assets/green-character.gif', 100, 100)
+newImage('assets/pine-tree.png', 450, 200)
+newImage('assets/tree.png', 200, 300)
+newImage('assets/pillar.png', 350, 100)
+newImage('assets/crate.png', 150, 200)
+newImage('assets/well.png', 500, 425)
 
-sword.addEventListener('click', function(){
-    sword.remove()
-})
-
-
-
-let character = document.createElement('img')
-character.src = 'assets/pine-tree.png' //changes
-character.style.position = 'fixed' //stays in body
-character.style.left = '450px' //changes
-character.style.bottom = '200px' //changes
-document.body.append(character) //stays in body (but in the parenthesis has 'character')
+newItem('assets/sword.png', 500, 405)
+newItem('assets/shield.png', 165, 185)
+newItem('assets/staff.png', 600, 100)
 
 
-// let greenCharacter = document.createElement('img')
-// greenCharacter.src = 'assets/green-character.gif'
-// greenCharacter.style.position = 'fixed'
-// greenCharacter.style.left = '100px'
-// greenCharacter.style.bottom = '100px'
-// document.body.append(greenCharacter)
 
-// let pineTree = document.createElement('img')
-// pineTree.src = 'assets/pine-tree.png'
-// pineTree.style.position = 'fixed'
-// pineTree.style.left = '450px'
-// pineTree.style.bottom = '200px'
-// document.body.append(pineTree)
+
+
+
+
+
+
+// let character = document.createElement('img')
+// character.src = 'assets/pine-tree.png' //changes
+// character.style.position = 'fixed' //stays in body
+// character.style.left = '450px' //changes
+// character.style.bottom = '200px' //changes
+// document.body.append(character) //stays in body (but in the parenthesis has 'character')
+
 
 
